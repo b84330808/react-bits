@@ -1170,6 +1170,7 @@ const CircularGallery = ({
       document.removeEventListener('pointerdown', onAnyPointer, true);
       labelLayer.replaceChildren();
       textures.forEach(entry => entry.texture && gl.deleteTexture(entry.texture));
+      textures.clear();
       gl.deleteTexture(blank);
       gl.deleteProgram(program.program);
       gl.deleteBuffer(vertexBuffer);
